@@ -1,6 +1,6 @@
 const form = document.getElementById('form-contato');
-const imgAdicionado = '<img src="./src/adicionado.png" alt="Sinalização de confirmção" />';
-const imgNaoAdicionado = '<img src=".src/naoadicionado.png" alt="Sinalização de não confirmação" />';
+const imgAdicionado = '<img src="./imagens/adicionado.png" alt="Sinalização de confirmção" />';
+const imgNaoAdicionado = '<img src=".imagens/naoadicionado.png" alt="Sinalização de não confirmação" />';
 const contatos = [];
 const numerosContatos = [];
 const spanAdicionado = '<span class="contato adicionado">Adicionado</span>';
@@ -13,7 +13,7 @@ form.addEventListener('submit', function(e) {
 
     adicionaLinha();
     atualizaTabela();
-    atualizaTotalAdicionados();
+    atualizaContatosAdicionados();
 });
 
 function adicionaLinha() {
@@ -21,7 +21,7 @@ function adicionaLinha() {
     const inputNumeroContato = document.getElementById('numero-contato'); 
 
     if (contatos.includes(inputNomeContato.value)) {
-        alert(`O contato: ${inputNomeContato.value} já foi adicionado`);
+        alert(`O contato: ${inputNomeContato.value} já foi adicionado`);        
     } else {    
         contatos.push(inputNomeContato.value);
         numerosContatos.push(parseFloat(inputNumeroContato.value));
