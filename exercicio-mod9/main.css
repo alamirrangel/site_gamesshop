@@ -1,0 +1,18 @@
+.container {   
+    text-align: center;
+    margin-top: 250px;
+} 
+
+button {
+    font-weight: bold;
+}
+
+table {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+
+.tarefa-completada {
+    text-decoration: line-through;
+}
